@@ -62,7 +62,7 @@
 ## Bloco 2 — Conteúdo do RAV (RN-CNT)
 
 ### RN-CNT-001 — Elementos obrigatórios do Campo B
-- **Descrição:** O texto do Campo B deve evidenciar: (a) diagnóstico baseado nos objetivos de aprendizagem do ano (Currículo em Movimento / Org. Curricular SuperaÇão); (b) objetivos alcançados no bimestre; (c) acompanhamentos e adaptações realizadas; (d) dificuldades percebidas + intervenções/estratégias; (e) especificidades socioemocionais relevantes; (f) ações pedagógicas para o próximo bimestre.
+- **Descrição:** O texto do Campo B deve evidenciar: (a) diagnóstico baseado nos objetivos de aprendizagem do ano (Currículo em Movimento / Org. Curricular SuperAção); (b) objetivos alcançados no bimestre; (c) acompanhamentos e adaptações realizadas; (d) dificuldades percebidas + intervenções/estratégias; (e) especificidades socioemocionais relevantes; (f) ações pedagógicas para o próximo bimestre.
 - **Origem:** [O-2024] Campo B.
 - **Objetivo:** Cumprir a função formativa do registro.
 - **Exceções:** Item (e) apenas quando houver ocorrência, resguardado sigilo (RN-SEG-004). Avanço de estudos (art. 233) apenas quando aplicável.
@@ -126,7 +126,7 @@
 - **Validações:** Heurística de detecção de listas curriculares/planos de aula no texto.
 
 ### RN-CNT-009 — Registros condicionais por perfil do estudante
-- **Descrição:** Perfis específicos exigem conteúdo adicional: SuperaÇão (ênfase nas aprendizagens alcançadas conforme Caderno do Programa); atendimento em Sala de Recursos/Equipe de Apoio (registrar impactos); infrequência (registrar ações de busca ativa); avanço de estudos (art. 233); transição da Educação Infantil (apropriação do RDIC pelo professor do BIA).
+- **Descrição:** Perfis específicos exigem conteúdo adicional: SuperAção (ênfase nas aprendizagens alcançadas conforme Caderno do Programa); atendimento em Sala de Recursos/Equipe de Apoio (registrar impactos); infrequência (registrar ações de busca ativa); avanço de estudos (art. 233); transição da Educação Infantil (apropriação do RDIC pelo professor do BIA).
 - **Origem:** [O-2024].
 - **Objetivo:** Cobertura das obrigações específicas que o professor mais esquece.
 - **Exceções:** Aplicável somente quando o perfil/situação existir.
@@ -149,7 +149,7 @@
 - **Validações:** Constraint de domínio.
 
 ### RN-RES-003 — Consistência resultado × ano/bloco/perfil
-- **Descrição:** O sistema valida a coerência do resultado com o ano do estudante: **Progressão Continuada** para 1º→2º, 2º→3º (1º Bloco) e 4º→5º (2º Bloco), e SuperaÇão Grupo 2→5º ano; **Aprovado** apenas para 3º e 5º anos (fim de bloco) e SuperaÇão Grupos 1 e 3 com avanço de 1 ano; **Reprovado** apenas para 3º ano, 5º ano, SuperaÇão Grupos 1/3 sem êxito, ou qualquer ano por excesso de faltas; **Cursando** para Adequação Curricular na Temporalidade; **Avanço–Correção de Fluxo** para SuperaÇão com objetivos de 2 anos consolidados.
+- **Descrição:** O sistema valida a coerência do resultado com o ano do estudante: **Progressão Continuada** para 1º→2º, 2º→3º (1º Bloco) e 4º→5º (2º Bloco), e SuperAção Grupo 2→5º ano; **Aprovado** apenas para 3º e 5º anos (fim de bloco) e SuperAção Grupos 1 e 3 com avanço de 1 ano; **Reprovado** apenas para 3º ano, 5º ano, SuperAção Grupos 1/3 sem êxito, ou qualquer ano por excesso de faltas; **Cursando** para Adequação Curricular na Temporalidade; **Avanço–Correção de Fluxo** para SuperAção com objetivos de 2 anos consolidados.
 - **Origem:** [F1-2024] Observações Gerais (f).
 - **Objetivo:** Impedir resultado juridicamente inválido em documento de fé pública.
 - **Exceções:** Casos extraordinários deliberados pelo Conselho de Classe — permitir override com justificativa registrada [PO].
