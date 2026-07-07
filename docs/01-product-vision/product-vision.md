@@ -28,7 +28,7 @@ As dores estruturais:
 
 ### 2.2 Por que agora
 
-- A norma 2024 reforçou exigências (SuperaÇão, busca ativa, socioemocional) — o RAV ficou mais complexo, não menos.
+- A norma 2024 reforçou exigências (SuperAção, busca ativa, socioemocional) — o RAV ficou mais complexo, não menos.
 - LLMs atingiram qualidade suficiente para escrita pedagógica assistida **com** validação de conformidade — mas o uso improvisado (ChatGPT genérico) produz exatamente o texto-padrão vedado e expõe dados de menores sem proteção.
 - Professores já usam IA por conta própria; a alternativa ao RAV AI não é "sem IA", é "IA sem conformidade, sem LGPD e sem pedagogia".
 
@@ -109,9 +109,9 @@ Anti-métrica vigiada: **% de RAVs aceitos sem nenhuma revisão humana** — se 
 
 ### P1 — Professora Regente (primária): "Ana, 38, 3º ano do BIA"
 
-Efetiva da SEDF há 12 anos, regente de uma turma de 28 crianças emCeilândia. Usa o celular o dia todo (WhatsApp é sua ferramenta de trabalho informal), computador em casa à noite. Anota percepções sobre os alunos em um caderno e na memória.
+Efetiva da SEDF há 12 anos, regente de uma turma de 28 crianças em Ceilândia. Usa o celular o dia todo (WhatsApp é sua ferramenta de trabalho informal), computador em casa à noite. Anota percepções sobre os alunos em um caderno e na memória.
 
-- **Dores:** a semana do RAV é "a pior do bimestre"; medo de escrever algo indevido sobre uma criança; sensação de que os textos ficam parecidos apesar do esforço; alunos do SuperaÇão e com adequação curricular exigem registros extras que ela nunca tem certeza de estar fazendo certo.
+- **Dores:** a semana do RAV é "a pior do bimestre"; medo de escrever algo indevido sobre uma criança; sensação de que os textos ficam parecidos apesar do esforço; alunos do SuperAção e com adequação curricular exigem registros extras que ela nunca tem certeza de estar fazendo certo.
 - **Ganhos esperados:** terminar os RAVs em dias, não semanas; segurança de conformidade; reencontrar nas observações registradas o percurso real de cada criança.
 - **Relação com IA:** curiosa, já testou ChatGPT para o RAV e não confiou no resultado ("genérico e inventava coisas"). Precisa ver **de onde** veio cada informação.
 - **Critério de sucesso dela:** "parece que fui eu que escrevi — eu no meu melhor dia."
@@ -141,7 +141,7 @@ Primeiro ano de regência, pouco repertório da escrita do RAV, alta ansiedade n
 | Textos que ficam iguais | Individualização real | Rastreabilidade evidência→texto: cada frase aponta sua origem; sem observação, sem afirmação |
 | Memória pedagógica dispersa | Linha do tempo por estudante | Observações rápidas no celular, organizadas automaticamente |
 | Formulário oficial rígido | Exportação fiel ao modelo 2024 | Saída idêntica ao F1-2024, campos A–G, pronta para imprimir e assinar |
-| Registros extras (SuperaÇão, TEA, busca ativa) | Guias contextuais | O sistema sabe o que a norma exige para cada perfil de estudante |
+| Registros extras (SuperAção, TEA, busca ativa) | Guias contextuais | O sistema sabe o que a norma exige para cada perfil de estudante |
 
 **Diferenciais defensáveis** frente a IA genérica: (1) conformidade normativa SEDF embutida e versionada; (2) anti-viés pedagógico como validador de primeira classe; (3) rastreabilidade evidência→texto — a IA não inventa porque só escreve sobre o que foi observado; (4) LGPD by design com pseudonimização; (5) exportação com fidelidade de fé pública.
 

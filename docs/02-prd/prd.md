@@ -22,7 +22,7 @@ Herdados da Visão (§3): OBJ-1 tempo −50% · OBJ-2 conformidade ≥95% · OBJ
 |--------|-----------------|
 | Autenticação | Cadastro/login do professor (e-mail+senha e Google OAuth), perfil único "Professor", recuperação de senha |
 | Estrutura escolar | Cadastro leve, feito pelo próprio professor: escola (nome/CRE), turma (bloco, ano, letra, turno), ano letivo com 4 bimestres |
-| Estudantes | Cadastro individual e em lote (colar lista de nomes); flags do Campo A (TEA/deficiência, adequação curricular, temporalidade, Sala de Recursos, SuperaÇão + forma de atendimento); frequência (faltas por bimestre) |
+| Estudantes | Cadastro individual e em lote (colar lista de nomes); flags do Campo A (TEA/deficiência, adequação curricular, temporalidade, Sala de Recursos, SuperAção + forma de atendimento); frequência (faltas por bimestre) |
 | Observações | Registro rápido (texto e voz-para-texto) associado a estudante(s); tipos: aprendizagem, dificuldade, intervenção, resultado de intervenção, socioemocional, frequência/busca ativa, outra; marcação exportável × interna (RN-SEG-004); linha do tempo por estudante |
 | Geração IA | Geração do Campo B a partir das observações do bimestre + flags + insumo adicional do professor; rastreabilidade evidência→texto; explicações (RN-IA-003); regeneração por seção |
 | Editor | Editor do RAV com estrutura guiada (diagnóstico → percurso/intervenções → resultados → próximos passos), melhoria de escrita e correção de linguagem sob demanda, autosave contínuo |
