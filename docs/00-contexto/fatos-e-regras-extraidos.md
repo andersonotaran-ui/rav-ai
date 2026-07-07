@@ -21,7 +21,7 @@
 
 | Campo | Conteúdo |
 |-------|----------|
-| **A** | Cabeçalho: ano letivo; CRE; unidade escolar; bloco (1º/2º); ano; turma; turno (matutino/vespertino/integral); professor(a) regente + demais professores; estudante; flags: deficiência/TEA (s/n), adequação curricular (s/n), temporalidade (s/n), Sala de Recursos (s/n), SuperaÇão "setado" no i-Educar (s/n) + forma de atendimento (Classe Comum personalizada / Turma SuperaÇão / Turma SuperaÇão Reduzida) + Organização Curricular específica aplicada (não/sim/parcialmente); bimestre; total de dias letivos; total de faltas |
+| **A** | Cabeçalho: ano letivo; CRE; unidade escolar; bloco (1º/2º); ano; turma; turno (matutino/vespertino/integral); professor(a) regente + demais professores; estudante; flags: deficiência/TEA (s/n), adequação curricular (s/n), temporalidade (s/n), Sala de Recursos (s/n), SuperAção "setado" no i-Educar (s/n) + forma de atendimento (Classe Comum personalizada / Turma SuperAção / Turma SuperAção Reduzida) + Organização Curricular específica aplicada (não/sim/parcialmente); bimestre; total de dias letivos; total de faltas |
 | **B** | Texto descritivo do processo de aprendizagem (ver §3) |
 | **C** | Local e data de término do bimestre |
 | **D** | Assinaturas/matrículas: professores (até 7), coordenador(a) pedagógico(a), pai/mãe ou responsável legal |
@@ -32,10 +32,10 @@
 ### Regras do Resultado Final (Campo E) [F1-2024]
 
 - **Cursando**: estudantes com Adequação Curricular na Temporalidade.
-- **Progressão Continuada**: promovidos 1º→2º e 2º→3º (1º Bloco) e 4º→5º (2º Bloco), sem exceder 25% de faltas; SuperaÇão Grupo 2 (4º ano)→5º ano.
-- **Aprovado**: estudantes do 3º ano (fim do 1º Bloco) e do 5º ano (fim do 2º Bloco) com desempenho exitoso e ≤25% de faltas; SuperaÇão Grupos 1 e 3 que avançarem 1 ano.
-- **Reprovado**: 3º ano, 5º ano e SuperaÇão Grupos 1/3 sem desempenho exitoso, ou qualquer estudante do 2º Ciclo com >25% de faltas.
-- **Avanço das Aprendizagens–Correção de Fluxo**: SuperaÇão com objetivos de 2 anos consolidados.
+- **Progressão Continuada**: promovidos 1º→2º e 2º→3º (1º Bloco) e 4º→5º (2º Bloco), sem exceder 25% de faltas; SuperAção Grupo 2 (4º ano)→5º ano.
+- **Aprovado**: estudantes do 3º ano (fim do 1º Bloco) e do 5º ano (fim do 2º Bloco) com desempenho exitoso e ≤25% de faltas; SuperAção Grupos 1 e 3 que avançarem 1 ano.
+- **Reprovado**: 3º ano, 5º ano e SuperAção Grupos 1/3 sem desempenho exitoso, ou qualquer estudante do 2º Ciclo com >25% de faltas.
+- **Avanço das Aprendizagens–Correção de Fluxo**: SuperAção com objetivos de 2 anos consolidados.
 - **Abandono**: nos termos do Regimento Escolar.
 - ⚠️ Retenção só ocorre ao final de cada bloco (3º e 5º anos) — nos demais anos vigora a progressão continuada.
 
@@ -43,14 +43,14 @@
 
 O relato deve evidenciar:
 
-1. **Diagnóstico** de cada estudante, baseado nos objetivos de aprendizagem do ano (Currículo em Movimento e/ou Organização Curricular SuperaÇão);
+1. **Diagnóstico** de cada estudante, baseado nos objetivos de aprendizagem do ano (Currículo em Movimento e/ou Organização Curricular SuperAção);
 2. **Objetivos de aprendizagem alcançados** no bimestre, com referência ao diagnóstico;
 3. **Acompanhamentos e adaptações pedagógicas/curriculares** realizadas em função de lacunas de aprendizagem;
 4. Questões de **avanço de estudos** (art. 233 do Regimento), quando houver;
 5. **Dificuldades percebidas** + **intervenções e estratégias** utilizadas para progressão (pelo professor e demais envolvidos);
 6. **Especificidades socioemocionais** eventuais que interferiram na aprendizagem;
 7. **Ações pedagógicas para o próximo bimestre** (prescrição);
-8. Atendimentos por Equipe de Apoio/Sala de Recursos e seus impactos; ações de busca ativa em caso de infrequência; para SuperaÇão, ênfase nas aprendizagens alcançadas.
+8. Atendimentos por Equipe de Apoio/Sala de Recursos e seus impactos; ações de busca ativa em caso de infrequência; para SuperAção, ênfase nas aprendizagens alcançadas.
 
 Instrumentos que referenciam o registro: observação, provas, exercícios, pesquisas, ficha individual, portfólio, produções individuais/em grupo, reagrupamentos, projetos interventivos. [O-2024]
 
@@ -92,6 +92,6 @@ Complementos do [PPTX] compatíveis: equilíbrio formativo — apontar progresso
 
 - **Exportação**: deve reproduzir fielmente o layout oficial do F1-2024 (fé pública). Um "modo impressão oficial" é requisito, não nicety.
 - **Assinaturas**: o fluxo real termina em papel assinado (professores, coordenação, responsável). O MVP gera o documento para impressão; assinatura digital é hipótese futura a validar com a SEEDF.
-- **Domínio**: entidades já evidentes — Rede/CRE, Unidade Escolar, Bloco/Ano/Turma/Turno, Estudante (com flags de atendimento), Professor, Bimestre, Observação, RAV (Campo B + metadados), Resultado Final, e programas (SuperaÇão, PECM, Educação Integral, Sala de Recursos, SEAA).
+- **Domínio**: entidades já evidentes — Rede/CRE, Unidade Escolar, Bloco/Ano/Turma/Turno, Estudante (com flags de atendimento), Professor, Bimestre, Observação, RAV (Campo B + metadados), Resultado Final, e programas (SuperAção, PECM, Educação Integral, Sala de Recursos, SEAA).
 - **IA**: as regras dos §§3–5 convertem-se diretamente em checklist de validação automatizada; a proibição de "texto-padrão" exige geração ancorada nas observações reais do estudante (rastreabilidade evidência→texto).
 - **Calendário**: 4 bimestres; Campo E apenas no 4º; Campo F (avanço de estudos) específico do 2º/3º bimestres no Formulário 2.

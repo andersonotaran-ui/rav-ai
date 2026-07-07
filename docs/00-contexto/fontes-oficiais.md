@@ -19,7 +19,7 @@
 | Currículo em Movimento do DF — Ensino Fundamental (edição vigente, 2018) | 🔗 Localizado — ingestão pendente | [educacao.df.gov.br](https://www.educacao.df.gov.br/documents/d/seedf/curriculo_em_movimento_do_distrito_federal___ensino_fundamental__2018_-pdf-1) |
 | Currículo em Movimento — Pressupostos Teóricos | 🔗 Localizado | [educacao.df.gov.br](https://www.educacao.df.gov.br/documents/d/seedf/curriculo_em_movimento_da_educacao_basica___pressupostos_teoricos) |
 | Organização Curricular 2023 — 2º Ciclo | 🔗 Localizado | [educacao.df.gov.br](https://www.educacao.df.gov.br/documents/d/seedf/organizacao-curricular-2023-2o-ciclo-2-pdf) |
-| Organização Curricular Programa SuperaÇão (2024) | 🔗 Localizado | [educacao.df.gov.br](https://www.educacao.df.gov.br/documents/d/seedf/programa-superacao-organizacao-curricular-pdf) |
+| Organização Curricular Programa SuperAção (2024) | 🔗 Localizado | [educacao.df.gov.br](https://www.educacao.df.gov.br/documents/d/seedf/programa-superacao-organizacao-curricular-pdf) |
 
 Páginas-índice oficiais: [Formulários](https://www.educacao.df.gov.br/pedagogico-formularios/) · [Currículos](https://www.educacao.df.gov.br/pedagogico-curriculo-em-movimento/) · [Diretrizes e orientações](https://www.educacao.df.gov.br/pedagogico-diretrizes/)
 
@@ -29,7 +29,7 @@ Páginas-índice oficiais: [Formulários](https://www.educacao.df.gov.br/pedagog
 - **Portaria nº 77, de 03/02/2009** — criou o RAv (substituiu o RDIA)
 - **Regimento Escolar da Rede Pública do DF (2019)** — art. 233 (Avanço de Estudos); limite de 25% de faltas
 - **Portaria nº 33/2020** — acompanhamento de frequência escolar (infrequência: 2 faltas injustificadas/semana no 2º Ciclo)
-- **Portaria nº 133/2023 e Parecer nº 001/2023-CEDF** — Programa SuperaÇão (correção de fluxo)
+- **Portaria nº 133/2023 e Parecer nº 001/2023-CEDF** — Programa SuperAção (correção de fluxo)
 - **Diretrizes Pedagógicas para Organização Escolar do 2º Ciclo** (p. 32 citada nas Orientações)
 - ECA, LDB e **LGPD** — citadas nas Orientações 2024 quanto a sigilo de informações do estudante
 
