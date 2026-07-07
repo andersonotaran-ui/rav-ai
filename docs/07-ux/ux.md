@@ -107,10 +107,10 @@ Profundidade máxima: 3 níveis. Nenhuma função essencial a mais de 2 cliques 
 │              │  ┌─ Sugestão IA ───────────┐ │   "preguiçosa"  │
 │ [+ incluir   │  │ (lilás) Recomenda-se…   │ │   → reescrever  │
 │  anotação]   │  │ Por quê? · Aceitar ✓ ✗  │ │                 │
-│              │  └───────────────────────┘ │ [Validar tudo]  │
+│              │  └─────────────────────────┘ │ [Validar tudo]  │
 ├──────────────┴──────────────────────────────┴─────────────────┤
 │ ⟳ salvo às 14:32  ·  v4  ·  [Gerar seção ▾] [Melhorar escrita]│
-└────────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────────────┘
 ```
 
 - **Zona 1 Evidências:** observações do bimestre com checkbox de inclusão (RF-030); internas 🔒 visíveis mas não incluíveis; clique em `[●data]` no texto destaca a evidência de origem (RF-031) — a rastreabilidade é bidirecional.
@@ -147,13 +147,13 @@ Profundidade máxima: 3 níveis. Nenhuma função essencial a mais de 2 cliques 
 
 ```
 Painel · Turma 3ºA · 2º bimestre          18 de 28 prontos ▓▓▓▓▓▓░░
-┌──────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────┐
 │ Estudante   Observações  Status                              │
 │ Ana P.      7            ✅ Exportado — aguardando assinaturas│
 │ Bruno M.    4            ✏️ Rascunho                          │
 │ Carla S.    0 ⚠          ○ Não iniciado   [registrar agora]  │
 │ …                                                            │
-└──────────────────────────────────────────────────────────┘
+└──────────────────────────────────────────────────────────────┘
 [Exportar todos os validados (PDF)]      [Gerar os não iniciados]
 ```
 
@@ -172,7 +172,7 @@ Passos encadeados com progresso: **Conta → Sua turma → Seus estudantes (cola
 | `AISuggestionCard` (lilás) | Card | proposta · explicação aberta · aceita · recusada |
 | `QualityChecklist` | próprio | ok · aviso · impedimento · executando |
 | `RavStatusBadge` | Badge | Rascunho · Validado · Exportado · Assinado (RN-DOC-003) |
-| `DiffViewer` | próprio | versão A/B, realçe de proveniência humano/IA |
+| `DiffViewer` | próprio | versão A/B, realce de proveniência humano/IA |
 | `ProgressBimestre` | Progress | 0–100% com contagem textual |
 | `StudentQuickPick` | Command | recentes · busca · multi-seleção (RF-024) |
 | Formulários, tabelas, modais, toasts | shadcn/ui | padrão |
