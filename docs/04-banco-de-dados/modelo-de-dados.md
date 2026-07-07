@@ -102,7 +102,7 @@ erDiagram
 | I-01 | 1 RAV por estudante×bimestre | UK `rav(estudante_id, bimestre_id)` (RN-FLX-001) |
 | I-02 | Resultado final somente no 4º bimestre | CHECK via trigger: `resultado_final IS NULL OR bimestre.numero=4` (RN-RES-001) |
 | I-03 | Coerência bloco×ano_escolar | CHECK na `turma` |
-| I-04 | Flags SuperaÇão dependentes | CHECK: atendimento/org_curricular exigem `superacao=true` |
+| I-04 | Flags SuperAção dependentes | CHECK: atendimento/org_curricular exigem `superacao=true` |
 | I-05 | Faltas ≤ dias letivos; justificadas ≤ total | CHECK em `frequencia_bimestre` |
 | I-06 | Versões imutáveis | Sem UPDATE em `rav_versao`/`claim` (trigger); correção = nova versão (RN-DOC-005) |
 | I-07 | Estado `assinado` exige exportação existente | trigger de transição (RN-DOC-003) |
