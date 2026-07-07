@@ -21,7 +21,7 @@ Posição de projeto: desenhar **desde já** como se fôssemos operador de um co
 
 | Titular | Dados | Sensível? | Minimização aplicada |
 |---------|-------|-----------|----------------------|
-| Estudante (criança) | nome, turma, flags de atendimento (TEA/deficiência, Sala de Recursos, SuperaÇão, temporalidade), faltas, observações pedagógicas, texto do RAV | Flags de saúde/deficiência: **sim** (art. 5º II); observações socioemocionais: potencialmente | Só campos exigidos pelo F1-2024 (RN-SEG-002); sem CPF, sem endereço, sem foto no MVP; socioemocional cifrada e interna por padrão (RN-SEG-004) |
+| Estudante (criança) | nome, turma, flags de atendimento (TEA/deficiência, Sala de Recursos, SuperAção, temporalidade), faltas, observações pedagógicas, texto do RAV | Flags de saúde/deficiência: **sim** (art. 5º II); observações socioemocionais: potencialmente | Só campos exigidos pelo F1-2024 (RN-SEG-002); sem CPF, sem endereço, sem foto no MVP; socioemocional cifrada e interna por padrão (RN-SEG-004) |
 | Responsável | nenhum dado cadastrado no MVP (assinatura ocorre no papel) | — | ausência deliberada |
 | Professor | nome, e-mail, matrícula (opcional p/ assinatura) | não | — |
 

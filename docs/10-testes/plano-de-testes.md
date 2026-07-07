@@ -22,14 +22,14 @@
 
 ### 2.1 Resultado Final (RN-RES-003) — teste de tabela exaustivo
 
-Dimensões: ano_escolar (1..5) × resultado (6) × perfil (regular, SuperaÇão G1/G2/G3, temporalidade) × faltas (≤25%, >25%). ~180 combinações geradas parametricamente; cada célula espera `aceito`, `rejeitado(regra)` ou `alerta`. Casos-sentinela:
+Dimensões: ano_escolar (1..5) × resultado (6) × perfil (regular, SuperAção G1/G2/G3, temporalidade) × faltas (≤25%, >25%). ~180 combinações geradas parametricamente; cada célula espera `aceito`, `rejeitado(regra)` ou `alerta`. Casos-sentinela:
 
 | Caso | Esperado |
 |------|----------|
 | 2º ano + Aprovado | 422 RN-RES-003 (progressão continuada é o correto) |
 | 5º ano + faltas 26% + Aprovado | alerta RN-RES-004; exige justificativa ou correção |
 | Temporalidade + qualquer bimestre 4 | Cursando aceito; demais opções alertam |
-| SuperaÇão G2 + Avanço–Correção de Fluxo | aceito somente com flag e org. curricular sim/parcialmente |
+| SuperAção G2 + Avanço–Correção de Fluxo | aceito somente com flag e org. curricular sim/parcialmente |
 | Resultado preenchido no 2º bimestre | bloqueio RN-RES-001 (I-02) |
 
 ### 2.2 Máquina de estados do RAV
@@ -83,7 +83,7 @@ Observação interna: não aparece em `/gerar` (pacote de evidências), em claim
 
 ## 6. Dados de teste
 
-Escola sintética completa ("EC Sintética 01"): 2 turmas × 28 estudantes com distribuição realista de flags (2 TEA, 3 Sala de Recursos, 2 SuperaÇão de formas distintas, 1 temporalidade, 2 infrequentes), observações de 1 bimestre gerado. **Nunca** usar dados reais de estudantes em dev/staging (RN-SEG). Seeds versionadas; corpora de evals em repositório com controle de acesso.
+Escola sintética completa ("EC Sintética 01"): 2 turmas × 28 estudantes com distribuição realista de flags (2 TEA, 3 Sala de Recursos, 2 SuperAção de formas distintas, 1 temporalidade, 2 infrequentes), observações de 1 bimestre gerado. **Nunca** usar dados reais de estudantes em dev/staging (RN-SEG). Seeds versionadas; corpora de evals em repositório com controle de acesso.
 
 ## 7. Critérios de saída do MVP (espelho executável do PRD §10)
 

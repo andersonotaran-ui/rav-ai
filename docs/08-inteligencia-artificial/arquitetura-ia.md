@@ -114,7 +114,7 @@ Política de severidade (RN-IA-005): camada 1 e categorias de vedação = **impe
 | Sem classificação técnica solta | RN-CNT-006 | 2 |
 | Cita avanços, não só dificuldades | RN-CNT-007 | 2 |
 | Sem conteúdos da turma | RN-CNT-008 | 2 |
-| Condicionais (SuperaÇão, Sala de Recursos, busca ativa, avanço de estudos, RDIC/BIA) | RN-CNT-009 | 2, dirigida por flags |
+| Condicionais (SuperAção, Sala de Recursos, busca ativa, avanço de estudos, RDIC/BIA) | RN-CNT-009 | 2, dirigida por flags |
 | Resultado final coerente | RN-RES-001..004 | 1 |
 
 ## 7. Memória e RAG
@@ -130,7 +130,7 @@ Preferências explícitas (tamanho de texto, formalidade) — configuração, n�
 ### 7.3 RAG (M3 — RF-038)
 
 - **MVP (sem RAG):** objetivos de aprendizagem do Currículo em Movimento **curados e estruturados** por ano/componente em tabelas versionadas — determinístico, auditável, suficiente para grounding do diagnóstico.
-- **M3:** corpus completo (Currículo em Movimento EF, Diretrizes 9dez24, Diretrizes 2º Ciclo, Caderno SuperaÇão, PPP da escola) em pgvector; chunking por seção normativa com metadados (documento, página, vigência); recuperação híbrida (BM25 + vetor); **toda citação com fonte e página** — mesma filosofia de rastreabilidade do grounding de evidências.
+- **M3:** corpus completo (Currículo em Movimento EF, Diretrizes 9dez24, Diretrizes 2º Ciclo, Caderno SuperAção, PPP da escola) em pgvector; chunking por seção normativa com metadados (documento, página, vigência); recuperação híbrida (BM25 + vetor); **toda citação com fonte e página** — mesma filosofia de rastreabilidade do grounding de evidências.
 - Regra de precedência do corpus: norma vigente > material de formação; conflitos apontados, nunca resolvidos silenciosamente (protocolo do projeto).
 
 ## 8. Avaliação (evals) — porta de qualidade de cada release de prompt/modelo
