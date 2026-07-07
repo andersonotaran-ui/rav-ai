@@ -1,0 +1,30 @@
+# Ambiente
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+
+# Node
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+
+# Artefatos
+dist/
+build/
+*.pdf.snapshot
