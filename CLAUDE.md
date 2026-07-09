@@ -71,3 +71,30 @@ cd apps/web && npm install && npm run dev
 ## Ambiente de produção
 
 VPS Hostinger com stack Docker `rav-ai` (Postgres+pgvector, Caddy) — detalhes em `infra/AMBIENTE-HOSTINGER.md`. Deploy de app ainda não configurado.
+
+## Estado atual (atualizado 08/07/2026)
+
+**Repositório:** `github.com/andersonotaran-ui/rav-ai` (privado). Pasta local sincronizada com `main`.
+
+**EP-01 (Fundação técnica) — scaffold feito, nenhuma story de negócio implementada ainda:**
+
+- `apps/api`: FastAPI mínimo (`src/main.py`) só com `GET /api/v1/health`; `pyproject.toml` já configura `ruff`, `mypy`, `pytest` e **`import-linter`** com os 2 contratos de arquitetura (independência entre os 8 contextos; camadas do contexto `rav`) — usar isso como guarda-corpo ao implementar. Os 8 bounded contexts (`identidade`, `estrutura_escolar`, `estudantes`, `observacoes`, `rav`, `ia`, `normas`, `auditoria`) existem só como pacotes vazios (`__init__.py` em `domain/application/infrastructure/api`) — **nenhuma entidade, caso de uso, repositório ou rota real ainda**. Sem Alembic configurado (sem pasta de migrations ainda, apesar da dependência estar no `pyproject.toml`). Teste único: `test_health.py`.
+- `apps/web`: Next.js 14 (App Router) scaffold com uma página placeholder; sem telas de produto (aguardando EP-07/UX).
+- Dockerfiles multi-stage prontos para `api` e `web`; workflow `.github/workflows/docker-publish.yml` builda e publica em GHCR a cada push em `main` que toque `apps/api/**` ou `apps/web/**`.
+- `docker-compose.dev.yml` sobe Postgres 16 com `pgvector` + `uuid-ossp` já criadas, e Redis — mas ainda não há models/migrations para popular o banco.
+
+**Infra de produção (VPS Hostinger, ver `infra/AMBIENTE-HOSTINGER.md` para detalhes completos):**
+
+- VPS provisionado (KVM 2, Ubuntu 24.04) com stack Docker `rav-ai`: Postgres+pgvector, Caddy (proxy/HTTPS), n8n. `api`/`web` **ainda não estão no compose da VPS**.
+- Pendência bloqueante de deploy: pacotes GHCR nascem privados (repo é privado) e a Hostinger não faz login em registry privado — decisão tomada foi tornar os pacotes `rav-ai-api`/`rav-ai-web` públicos no GitHub, mas isso ainda não foi confirmado.
+- Domínio definitivo ainda não escolhido (há 1 registro grátis pendente na conta).
+
+**Documentação:** todos os docs em `docs/` (PRD, arquitetura, regras de negócio, UX, IA, backlog, testes, LGPD) estão na versão 1.0 de 06/07/2026, com status **"Aguardando validação"** — ainda não confirmados como definitivos pelo PO.
+
+**Pendências bloqueadoras registradas (`docs/11-seguranca/seguranca-lgpd.md` §5):**
+
+- `P-JUR-01` (parecer jurídico da base legal B2C) e `P-JUR-02` (RIPD) bloqueiam o M2 (lançamento público).
+- `P-SEC-01` (DPAs com provedores de IA) e `P-SEC-02` (termo de participação do piloto) bloqueiam o M1 (piloto com dados reais).
+- `P-SEC-03` (pentest) bloqueia M2.
+
+**Próximo passo lógico:** iniciar EP-02 (Identidade e conta) e/ou EP-03/EP-06 conforme a ordem do backlog — ainda dentro de M0, antes de tocar em dados de estudante de verdade (P-SEC-01/02 seguem pendentes).
