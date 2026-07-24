@@ -21,7 +21,7 @@ Posição de projeto: desenhar **desde já** como se fôssemos operador de um co
 
 | Titular | Dados | Sensível? | Minimização aplicada |
 |---------|-------|-----------|----------------------|
-| Estudante (criança) | nome, turma, flags de atendimento (TEA/deficiência, Sala de Recursos, SuperAção, temporalidade), faltas, observações pedagógicas, texto do RAV | Flags de saúde/deficiência: **sim** (art. 5º II); observações socioemocionais: potencialmente | Só campos exigidos pelo F1-2024 (RN-SEG-002); sem CPF, sem endereço, sem foto no MVP; socioemocional cifrada e interna por padrão (RN-SEG-004) |
+| Estudante (criança) | nome completo (cifrado em repouso — RN-SEG-006), código de referência (iniciais + sufixo, exposto na UI no lugar do nome), turma, flags de atendimento (TEA/deficiência, Sala de Recursos, SuperAção, temporalidade), faltas, observações pedagógicas, texto do RAV | Flags de saúde/deficiência: **sim** (art. 5º II); observações socioemocionais: potencialmente | Só campos exigidos pelo F1-2024 (RN-SEG-002); sem CPF, sem endereço, sem foto no MVP; nome completo cifrado e substituído por código de referência na interface cotidiana (RN-SEG-006) — só decifrado sob vínculo válido ou na exportação oficial; socioemocional cifrada e interna por padrão (RN-SEG-004) |
 | Responsável | nenhum dado cadastrado no MVP (assinatura ocorre no papel) | — | ausência deliberada |
 | Professor | nome, e-mail, matrícula (opcional p/ assinatura) | não | — |
 
@@ -31,7 +31,7 @@ Canal de atendimento (e-mail DPO) desde o M2; acesso/correção: o RAV é docume
 
 ### 1.4 IA e dados (interseção com 08-IA)
 
-Pseudonimização pré-LLM (RN-SEG-001) com teste de vazamento em CI e monitor contínuo (10-Testes §3); DPAs assinados com Anthropic/OpenAI, com opt-out de treinamento; **nenhum dado de estudante usado para treinar modelos** — compromisso público; transparência: página "Como a IA funciona" em linguagem simples, incluindo instruções ao professor sobre o que não digitar em observações (dados de saúde detalhados, relatos de terceiros).
+Pseudonimização pré-LLM (RN-SEG-001) com teste de vazamento em CI e monitor contínuo (10-Testes §3) — mecanismo independente do código de referência de UI (RN-SEG-006), que não é forte o suficiente para uso como token de pseudonimização; DPAs assinados com Anthropic/OpenAI, com opt-out de treinamento; **nenhum dado de estudante usado para treinar modelos** — compromisso público; transparência: página "Como a IA funciona" em linguagem simples, incluindo instruções ao professor sobre o que não digitar em observações (dados de saúde detalhados, relatos de terceiros).
 
 ### 1.5 RIPD e governança
 
@@ -78,7 +78,7 @@ Plano mínimo M1: classificação (vazamento de PII de criança = severidade má
 
 ## 4. Segurança de aplicação e infraestrutura (consolidação)
 
-Checklist OWASP ASVS L2 mantido como anexo vivo; destaques já decididos: TLS 1.3, criptografia em repouso + cifragem aplicacional das observações internas (04-Dados), segredos em vault, dependabot/SCA no CI, imagens Docker mínimas e não-root, backups PITR com teste mensal de restauração (10-Testes §4), URLs de exportação temporárias assinadas (06-APIs §4), rate limiting por usuário e por IP, cabeçalhos de segurança (CSP estrita — sem scripts de terceiros no app), ZAP baseline por release.
+Checklist OWASP ASVS L2 mantido como anexo vivo; destaques já decididos: TLS 1.3, criptografia em repouso + cifragem aplicacional das observações internas e do nome completo do estudante (04-Dados; RN-SEG-006), segredos em vault, dependabot/SCA no CI, imagens Docker mínimas e não-root, backups PITR com teste mensal de restauração (10-Testes §4), URLs de exportação temporárias assinadas (06-APIs §4), rate limiting por usuário e por IP, cabeçalhos de segurança (CSP estrita — sem scripts de terceiros no app), ZAP baseline por release.
 
 ## 5. Pendências desta versão (bloqueadoras marcadas)
 
