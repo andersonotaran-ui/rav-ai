@@ -4,7 +4,7 @@
 FROM node:20-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm install
 
 # ---- builder: compila o Next.js em modo standalone ----
 FROM node:20-alpine AS builder
