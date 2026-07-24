@@ -271,6 +271,14 @@
 - **Impacto:** Política de retenção; fluxo de exclusão de conta; DPO.
 - **Validações:** Teste do fluxo de exclusão; parecer jurídico a obter na fase de implantação [lacuna registrada].
 
+### RN-SEG-006 — Código de referência do estudante na interface
+- **Descrição:** Na interface do professor (listas, cards, observações, URLs), o estudante é identificado por um **código de referência curto** — iniciais do nome + sufixo numérico de desambiguação dentro da turma (ex.: `AO-01`, `AO-02` para dois estudantes com as mesmas iniciais) — em vez do nome completo. O nome completo permanece armazenado (cifrado em repouso, mesmo padrão de `observacao` socioemocional — RN-SEG-004) e só é decifrado/exibido: (a) para o professor com vínculo válido, sob demanda explícita (ex.: tela de cadastro do estudante); (b) no Formulário 1 oficial exportado, onde a identificação nominal completa é exigida pela norma (RN-DOC-001).
+- **Origem:** [PO — decisão de 24/07/2026, minimização de exposição de PII de criança em telas e capturas de tela].
+- **Objetivo:** Reduzir a superfície de exposição do nome do estudante no uso cotidiano da plataforma (tela compartilhada, print, gravação) sem comprometer a validade do documento oficial nem a operação do professor.
+- **Exceções:** O documento exportado (RAV oficial) sempre usa o nome completo — obrigação normativa, não contornável (RN-DOC-001, F1-2024 Campo A). O código de referência é exclusivamente um recurso de interface interna; **não substitui** o mecanismo de pseudonimização para chamadas a LLM externa (RN-SEG-001 permanece com seu próprio dicionário de tokens, mais forte que iniciais).
+- **Impacto:** Modelo de dados (`estudante.nome_cifrado`, `estudante.codigo_referencia`); geração automática do código no cadastro/matrícula; UX (listas, cards, busca); exportação PDF/Word decifra o nome apenas no momento da geração do documento.
+- **Validações:** Unicidade do código por turma (`UK(turma_id, codigo_referencia)`) — colisão de iniciais resolvida por sufixo sequencial automático; teste garantindo que nenhuma tela fora do fluxo de exportação oficial e do cadastro do estudante renderiza nome completo em claro por padrão; teste de que a decifragem do nome é sempre auditada (RN-FLX-005).
+
 ---
 
 ## Pendências e lacunas desta versão
