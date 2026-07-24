@@ -1,8 +1,9 @@
 # 11 — Segurança e LGPD · RAV AI
 
-**Versão:** 1.0 · 06/07/2026 · Aguardando validação
+**Versão:** 1.1 · 24/07/2026 · Aguardando validação
 **Depende de:** 05-RNs (bloco RN-SEG) · 03-Arquitetura §4 · 04-Dados §6 · 06-APIs §4 · 10-Testes §2.4/2.5
 **Contexto agravante:** dados pessoais de **crianças** (titulares com proteção reforçada — LGPD art. 14) em **documento público de escrituração escolar**. Segurança aqui não é requisito não funcional: é o produto.
+**Entidade operadora:** Otaran Soluções LTDA — CNPJ 47.729.976/0001-63, Sociedade Empresária Limitada, Brasília/DF [PO — decisão de 24/07/2026]. É a pessoa jurídica que contrata os provedores de IA e deve figurar nos DPAs, contratos com escolas/rede e no RIPD.
 
 ---
 
@@ -12,8 +13,8 @@
 
 | Cenário | Controlador | Operador | Base legal provável |
 |---------|-------------|----------|---------------------|
-| MVP B2C (professor assina individualmente) | **Cenário juridicamente delicado:** o professor trata dados de estudantes sob atribuição da escola/rede | RAV AI (plataforma) | Execução de política pública/obrigação legal da escrituração (arts. 7º/23) via atuação do professor + legítimo interesse — **exige parecer jurídico antes do lançamento público (pendência P-JUR-01, bloqueadora do M2)** |
-| B2B/B2G futuro | Escola/Secretaria | RAV AI | Contrato + DPA — cenário limpo |
+| MVP B2C (professor assina individualmente) | **Cenário juridicamente delicado:** o professor trata dados de estudantes sob atribuição da escola/rede | RAV AI (plataforma, operada pela Otaran Soluções LTDA) | Execução de política pública/obrigação legal da escrituração (arts. 7º/23) via atuação do professor + legítimo interesse — **exige parecer jurídico antes do lançamento público (pendência P-JUR-01, bloqueadora do M2)** |
+| B2B/B2G futuro | Escola/Secretaria | RAV AI (Otaran Soluções LTDA) | Contrato + DPA — cenário limpo |
 
 Posição de projeto: desenhar **desde já** como se fôssemos operador de um controlador institucional (padrão mais exigente), e tratar o M1 (piloto fechado) com termo de consentimento/compromisso explícito dos professores participantes e comunicação às escolas envolvidas.
 
@@ -31,7 +32,13 @@ Canal de atendimento (e-mail DPO) desde o M2; acesso/correção: o RAV é docume
 
 ### 1.4 IA e dados (interseção com 08-IA)
 
-Pseudonimização pré-LLM (RN-SEG-001) com teste de vazamento em CI e monitor contínuo (10-Testes §3) — mecanismo independente do código de referência de UI (RN-SEG-006), que não é forte o suficiente para uso como token de pseudonimização; DPAs assinados com Anthropic/OpenAI, com opt-out de treinamento; **nenhum dado de estudante usado para treinar modelos** — compromisso público; transparência: página "Como a IA funciona" em linguagem simples, incluindo instruções ao professor sobre o que não digitar em observações (dados de saúde detalhados, relatos de terceiros).
+Pseudonimização pré-LLM (RN-SEG-001) com teste de vazamento em CI e monitor contínuo (10-Testes §3) — mecanismo independente do código de referência de UI (RN-SEG-006), que não é forte o suficiente para uso como token de pseudonimização; **nenhum dado de estudante usado para treinar modelos** — compromisso público; transparência: página "Como a IA funciona" em linguagem simples, incluindo instruções ao professor sobre o que não digitar em observações (dados de saúde detalhados, relatos de terceiros).
+
+Status dos DPAs com provedores de IA (P-SEC-01), atualizado em 24/07/2026:
+
+- **Anthropic:** conta de API/Console registrada em nome da Otaran Soluções LTDA (CNPJ 47.729.976/0001-63, endereço de Brasília/DF cadastrado em Configurações da Organização). O DPA da Anthropic é incorporado automaticamente aos Termos Comerciais da API — **já em vigor**, sem documento adicional a assinar. Retenção operacional padrão de 30 dias (configurável para Zero Data Retention).
+- **OpenAI:** conta ainda como "Personal Organization"; verificação Business iniciada via parceiro Persona (fluxo de KYB com documentos da Otaran Soluções) — **pendente de conclusão** pelo responsável legal. O DPA da OpenAI só é executável após essa verificação.
+- Revisão jurídica pendente (parte do P-JUR-01/02): confirmar que as SCCs padrão desses DPAs (redigidas para GDPR) satisfazem a exigência de salvaguarda para transferência internacional da LGPD (art. 33), já que a ANPD ainda não publicou cláusulas-padrão próprias.
 
 ### 1.5 RIPD e governança
 
@@ -82,12 +89,12 @@ Checklist OWASP ASVS L2 mantido como anexo vivo; destaques já decididos: TLS 1.
 
 ## 5. Pendências desta versão (bloqueadoras marcadas)
 
-| ID | Pendência | Bloqueia |
-|----|-----------|----------|
-| P-JUR-01 | Parecer jurídico: base legal do cenário B2C + prazo de guarda escolar | **M2 (lançamento público)** |
-| P-JUR-02 | RIPD completo | M2 |
-| P-SEC-01 | DPAs formais com provedores de IA | M1 (piloto com dados reais) |
-| P-SEC-02 | Termo de participação do piloto (professores) + comunicação às escolas | M1 |
-| P-SEC-03 | Pentest externo | M2 |
+| ID | Pendência | Bloqueia | Status |
+|----|-----------|----------|--------|
+| P-JUR-01 | Parecer jurídico: base legal do cenário B2C + prazo de guarda escolar | **M2 (lançamento público)** | Não iniciado |
+| P-JUR-02 | RIPD completo | M2 | Não iniciado |
+| P-SEC-01 | DPAs formais com provedores de IA | M1 (piloto com dados reais) | Anthropic ✅ (automático via Termos Comerciais); OpenAI 🟡 (verificação Business em andamento) |
+| P-SEC-02 | Termo de participação do piloto (professores) + comunicação às escolas | M1 | Não iniciado |
+| P-SEC-03 | Pentest externo | M2 | Não iniciado |
 
 **Documentos impactados:** 02-PRD (P-JUR-01 entra como dependência do roadmap M2) · 09-Backlog (stories de MFA admin, security.txt, monitor de PII) · 10-Testes (suites §2.4/2.5 e monitor contínuo).
