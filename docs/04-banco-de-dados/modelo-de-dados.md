@@ -51,7 +51,7 @@ erDiagram
 
 | Tabela | Colunas principais | Notas |
 |--------|--------------------|-------|
-| `estudante` | id, turma_id FK, nome, **flags:** deficiencia_tea BOOL, adequacao_curricular BOOL, temporalidade BOOL, sala_recursos BOOL, superacao BOOL, superacao_atendimento (`classe_comum/turma/turma_reduzida` NULL), superacao_org_curricular (`nao/sim/parcialmente` NULL), status (`ativo/transferido/arquivado`) | Campo A completo (RN-CNT-009); transferido preserva dados (RN-FLX-004) |
+| `estudante` | id, turma_id FK, **nome_cifrado BYTEA** (nome completo, cifrado em repouso — RN-SEG-006), **codigo_referencia VARCHAR(6)** (iniciais + sufixo de desambiguação, ex. `AO-01`; exibido na UI no lugar do nome; **UK(turma_id, codigo_referencia)**), **flags:** deficiencia_tea BOOL, adequacao_curricular BOOL, temporalidade BOOL, sala_recursos BOOL, superacao BOOL, superacao_atendimento (`classe_comum/turma/turma_reduzida` NULL), superacao_org_curricular (`nao/sim/parcialmente` NULL), status (`ativo/transferido/arquivado`) | Campo A completo (RN-CNT-009); transferido preserva dados (RN-FLX-004); nome completo só é decifrado sob vínculo válido (RN-SEG-003) ou na exportação oficial (RN-DOC-001) |
 | `frequencia_bimestre` | id, estudante_id FK, bimestre_id FK, total_faltas INT, justificadas INT DEFAULT 0, UK(estudante,bimestre) | % calculado vs `bimestre.dias_letivos` (RN-RES-004) |
 
 ### Observações
@@ -109,6 +109,7 @@ erDiagram
 | I-08 | Matriz resultado×ano×perfil (RN-RES-003) | **camada de domínio** (não trigger — regra rica com override); banco garante apenas domínio do enum |
 | I-09 | Claim factual de origem IA exige ≥1 evidência | CHECK diferido via validação de aplicação + eval (RN-IA-002) |
 | I-10 | Observação interna nunca em claim_evidencia de versão exportada | constraint de aplicação + teste (RN-SEG-004) |
+| I-11 | Código de referência único por turma | UK `estudante(turma_id, codigo_referencia)`; geração automática (iniciais + sufixo sequencial em caso de colisão) na aplicação (RN-SEG-006) |
 
 ## 4. Dicionário de dados — campos críticos (amostra normativa)
 
@@ -117,6 +118,8 @@ erDiagram
 | `rav.estado` | enum | máquina de estados UX §6.1 / RN-DOC-003 |
 | `rav.resultado_final` | enum | 6 valores exatos do F1-2024 Campo E (RN-RES-002) |
 | `estudante.superacao_atendimento` | enum | 3 formas do F1-2024 Campo A |
+| `estudante.codigo_referencia` | string | iniciais + sufixo, único por turma — identificação na UI (RN-SEG-006) |
+| `estudante.nome_cifrado` | bytea | nome completo cifrado em repouso; decifrado só sob vínculo válido ou na exportação oficial (RN-SEG-006) |
 | `observacao.exportavel` | bool | fronteira de sigilo RN-SEG-004 — controla entrada no pipeline |
 | `claim.proveniencia` | enum | professor/ia/ia_editada — RN-IA-004 |
 | `norma_regra.parametros` | jsonb | léxico anti-viés, limiar similaridade, matriz RN-RES-003 |
@@ -135,4 +138,4 @@ Dicionário completo será gerado do schema (fonte única) para evitar divergên
 
 Exclusão de conta: anonimiza `usuario` e desvincula PII; `rav_versao`/`exportacao`/`auditoria` permanecem (obrigação de escrituração). Estudante transferido: `status=transferido`, dados retidos. Política de retenção formal e base legal: doc 11 + parecer jurídico (pendência registrada).
 
-**Documentos impactados:** 06-APIs (payloads espelham schema), 10-Testes (matriz I-01..I-10), 11-Segurança (cifragem, retenção).
+**Documentos impactados:** 06-APIs (payloads espelham schema), 10-Testes (matriz I-01..I-11), 11-Segurança (cifragem, retenção).
